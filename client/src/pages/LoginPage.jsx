@@ -48,8 +48,6 @@ const LoginPage = () => {
                 })
                 .then(res => res.data);
 
-            console.log({ userInfo });
-
             const { picture, email, name, sub } = userInfo;
 
             dispatch(googleLogin(sub, email, name, picture));
