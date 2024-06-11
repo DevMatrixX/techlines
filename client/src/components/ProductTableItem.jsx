@@ -24,9 +24,7 @@ const ProductTableItem = ({ product }) => {
     const dispatch = useDispatch();
     const cancelRef = useRef();
 
-    console.log({ imageTwo, imageOne, product });
-
-    const onSaveProduct = () => {
+     const onSaveProduct = () => {
         dispatch(
             updateProduct({
                 id: product._id,

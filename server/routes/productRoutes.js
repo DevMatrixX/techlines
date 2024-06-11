@@ -103,12 +103,10 @@ const create = asyncHandler(async(req, res) => {
 })
 
 const update = asyncHandler(async(req, res) => {
-    const { brand, name, category, stock, id, subtitle, imageOne, imageTwo } = req.body
+    const { brand, name, category, stock, id, subtitle, imageOne = '', imageTwo = '' } = req.body
     const { price, images, productIsNew, description, stripeId } = req.body
 
     const product = await Product.findById(id)
-
-    console.log({body: req.body})
 
     if(product) {
         product.images = [imageOne, imageTwo]
@@ -117,7 +115,6 @@ const update = asyncHandler(async(req, res) => {
         product.stripeId = stripeId
         product.subtitle = subtitle
         product.category = category
-        product.images = images
         product.price = price
         product.brand = brand
         product.stock = stock

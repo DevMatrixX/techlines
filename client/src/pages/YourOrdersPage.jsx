@@ -45,8 +45,8 @@ const YourOrdersPage = () => {
                         <Heading fontWeight="bold" size="xl" mt="5">
                             Orders History
                         </Heading>
-                        <TableContainer mt="10">
-                            <Table variant="striped">
+                        <TableContainer mb='20' mt="10">
+                            <Table variant="simple">
                                 <Thead>
                                     <Tr>
                                         <Th>Order Id</Th>
